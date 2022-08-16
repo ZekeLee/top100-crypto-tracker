@@ -10,7 +10,7 @@ const Overview = styled.ul`
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${(props) => props.theme.boxColor};
   border-radius: 10px;
 `;
 

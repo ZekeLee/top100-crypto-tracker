@@ -18,8 +18,8 @@ const CoinList = styled.ul`
 `;
 
 const Coin = styled.li`
-  color: ${(props) => props.theme.bgColor};
-  background-color: #fff;
+  color: ${(props) => props.theme.textColor};
+  background-color: ${(props) => props.theme.boxColor};
   border-radius: 15px;
   a {
     display: flex;

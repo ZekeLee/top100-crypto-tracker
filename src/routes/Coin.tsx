@@ -39,7 +39,7 @@ const Overview = styled.section`
   flex-direction: column;
   gap: 1rem;
   padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${(props) => props.theme.boxColor};
   border-radius: 10px;
 `;
 
@@ -65,17 +65,17 @@ const Tabs = styled.ul`
 `;
 
 const Tab = styled.li<{ isActive: boolean }>`
-  font-size: 0.75rem;
-  color: ${(props) => props.theme.textColor};
-  font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
   background-color: ${(props) =>
-    props.isActive ? props.theme.accentColor : 'rgba(0, 0, 0, 0.5)'};
+    props.isActive ? props.theme.accentColor : props.theme.boxColor};
   border-radius: 10px;
   a {
     display: block;
     padding: 0.5rem 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: ${(props) => (props.isActive ? '#fff' : props.theme.textColor)};
+    text-align: center;
+    text-transform: uppercase;
   }
 `;
 
