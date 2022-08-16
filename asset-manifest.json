@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/top100-crypto-tracker/static/js/main.f96a777f.js",
+    "main.js": "/top100-crypto-tracker/static/js/main.f3b8a29f.js",
     "index.html": "/top100-crypto-tracker/index.html",
-    "main.f96a777f.js.map": "/top100-crypto-tracker/static/js/main.f96a777f.js.map"
+    "main.f3b8a29f.js.map": "/top100-crypto-tracker/static/js/main.f3b8a29f.js.map"
   },
   "entrypoints": [
-    "static/js/main.f96a777f.js"
+    "static/js/main.f3b8a29f.js"
   ]
 }
