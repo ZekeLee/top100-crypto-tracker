@@ -35,4 +35,13 @@
 ```
 
 ## 📌 Issue
-- coin-paprika API가 유료화 되는 바람에 임시로 다른 API를 사용했지만 중간 중간 코인의 싱크가 맞지 않아 차트와 가격 정보를 확인할 때 데이터가 없어서 에러가 난다.
+
+- coin-paprika API가 유료화 되는 바람에 임시로 다른 API를 사용했지만 중간 중간 코인의 싱크가 맞지 않아 특정 코인의 차트와 가격 정보를 확인할 때 데이터가 없어서 에러 발생
+
+## 📌 Features
+
+- Dark Mode / Light Mode 기능 추가
+  1. state를 사용하기 위해 기존에 `index.tsx`에서 Providing 하던 ThemeProvider와 theme를 App.tsx로 이동
+  2. `theme.ts`에 Dark Theme, Light Theme 추가
+  3. ApexCharts 라이브러리에도 Dark Mode, Light Mode 일 때 Chart 자체에 Dark, Light Mode 옵션을 사용하고 싶으나, Prop Drilling 발생
+  4. `Recoil`을 사용해서 isDark Atom을 생성한 후 App 컴포넌트와 Chart 컴포넌트에서 상태 값을 가져와서 사용
