@@ -3,11 +3,13 @@ import GlobalStyle from './GlobalStyle';
 import { HelmetProvider } from 'react-helmet-async';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './theme';
-import { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { isDarkAtom } from './atoms';
 
 const Toggle = styled.button.attrs({ type: 'button' })`
   all: unset;
   position: relative;
+  margin-top: 1rem;
   width: 4rem;
   height: 2rem;
   background-color: ${(props) => props.theme.boxColor};
@@ -30,16 +32,17 @@ const Toggle = styled.button.attrs({ type: 'button' })`
 `;
 
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
-  const toggleMode = () => setIsDark((current) => !current);
+  const [isDark, setIsDark] = useRecoilState(isDarkAtom);
+
+  const toggleMode = () => setIsDark((prev) => !prev);
   return (
     <>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-        <Toggle className={isDark ? 'on' : ''} onClick={toggleMode}>
-          <span></span>
-        </Toggle>
         <GlobalStyle />
         <HelmetProvider>
+          <Toggle className={isDark ? 'on' : ''} onClick={toggleMode}>
+            <span></span>
+          </Toggle>
           <Router />
         </HelmetProvider>
       </ThemeProvider>
