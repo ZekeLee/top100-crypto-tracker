@@ -13,7 +13,7 @@
 - `/`: 메인 페이지 모든 코인 목록
 - `/:id`: 해당 id를 가지고 있는 코인의 상세 정보
 - `/:id/chart`: 해당 코인의 차트 정보
-- `/:id/chart`: 해당 코인의 가격 정보
+- `/:id/price`: 해당 코인의 가격 정보
 
 ## 📌 File Path
 
@@ -33,3 +33,6 @@
     ├── Router.tsx             Router Component
     └── theme.tsx             Theme Component
 ```
+
+## 📌 Issue
+- coin-paprika API가 유료화 되는 바람에 임시로 다른 API를 사용했지만 중간 중간 코인의 싱크가 맞지 않아 차트와 가격 정보를 확인할 때 데이터가 없어서 에러가 난다.
