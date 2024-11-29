@@ -6,7 +6,7 @@
 
 ## 📌 Deploy URL
 
-- [https://dingunote.github.io/top100-crypto-tracker/](https://dingunote.github.io/top100-crypto-tracker/)
+- [https://zekelee.github.io/top100-crypto-tracker/](https://zekelee.github.io/top100-crypto-tracker/)
 
 ## 📌 Page Directory
 
